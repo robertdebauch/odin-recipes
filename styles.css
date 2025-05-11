@@ -2,8 +2,8 @@
     box-sizing: border-box;
 
     font-family:
-    'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
 
@@ -21,13 +21,27 @@ h1 {
     word-wrap: break-word;
 }
 
+h2 {
+    font-size: 48px;
+    font-family: serif;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+h3 {
+    font-size: 32px;
+    font-family: serif;
+    font-weight: normal;
+    word-wrap: break-word;
+}
+
 p {
-    font-size: 20px;
+    font-size: 24px;
     line-height: 2rem;
+    padding-top: 12px;
 }
 
 .accent {
-    font-family: serif;
     font-style: italic;
     font-weight: light;
     color: #806c91;
@@ -35,18 +49,57 @@ p {
 
 /* End of text styles */
 
-div.main-content {
+div.box {
     background-color: #e8ece4;
-    margin: 24px;
     border-radius: 32px;
-    padding: 0 24px 24px 24px;
+    margin: 48px;
+    filter: drop-shadow(0px 2px 2px rgba(51, 58, 42, .5));
+}
+
+div.main-content {
+    /* margin: 24px; */
+    padding: 16px 32px;
 }
 
 div.header {
     background-color: #e8ece4;
-    padding: 12px 0 12px 16px; 
     margin-right: auto;
 }
+
+/* recipes styling */
+
+div.recipe-box {
+    background: hsl(90, 17%, 85%);
+    padding: 32px 16px 12px 16px;
+    border: 2px dotted rgba(51, 58, 42, 0.6);
+    border-radius: 24px;
+    margin-top: 40px;
+    background-color: hsl(90, 17%, 85%);
+    background-image: url(http://www.transparenttextures.com/patterns/textured-paper.png);
+    background-blend-mode: overlay;
+}
+
+div.recipe-box h3 {
+    display: inline;
+}
+
+div.recipe-box ul, ol {
+    font-size: 20px;
+}
+
+div.recipe-box ul {
+    list-style: disc;
+}
+
+div.recipe-box ol {
+    list-style: decimal;
+}
+
+div.recipe-box li::marker {
+    color: #333a2a;
+}
+
+/* end of recipes styling */
 
 /* cookbook nav styling */
 
@@ -64,18 +117,24 @@ div.header {
     text-decoration: none;
     font-size: 20px;
     padding: 4px 16px;
-    margin: 0  8px 0 0;
+    margin: 0 8px 0 0;
     border-radius: 16px;
+}
+
+.cookbook-navigation li {
+    display: inline;
 }
 
 /* end of cookbook nav styling */
 
-li {
-    display: inline;
-}
 
 a {
     color: #806c91;
+}
+
+li {
+    line-height: 2rem;
+    padding: 8px 0;
 }
 
 img {
@@ -86,4 +145,33 @@ img.hero {
     border-radius: 24px;
     width: 100%;
     opacity: 80%;
+    mix-blend-mode: multiply;
 }
+
+/* navigation bar styling */
+
+div.navigation {
+    max-width: 1200px;
+    text-align: center;
+    margin: -16px 48px -24px 48px;
+    background-color: #806c91;
+    border-bottom-right-radius: 32px;
+    border-bottom-left-radius: 32px;
+}
+
+div.navigation a {
+    text-decoration: none;
+    color: #e8ece4;
+}
+
+div.navigation ul, ol {
+    list-style: none;
+}
+
+div.navigation li {
+    display: inline-block;
+    padding-right: 24px;
+    padding-left: 24px;
+}
+
+/* end of navigation bar styling */
